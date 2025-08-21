@@ -1,0 +1,104 @@
+/* ===== Modal base ===== */
+.modal {
+  display: none;             
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,.6);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  padding: 16px 18px 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0,0,0,.25);
+  animation: modal-scale-in .18s ease-out;
+}
+
+@keyframes modal-scale-in {
+  from { transform: scale(.95); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+#modalPokemonName { text-transform: capitalize; font-size: 1.5rem; color:#222; }
+#modalPokemonNumber { font-size: .9rem; color:#666; }
+
+/* Imagem */
+#modalPokemonImage {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto 8px;
+}
+
+/* Tipos */
+#modalPokemonTypes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+#modalPokemonTypes span {
+  color: #fff;
+  font-weight: 600;
+  font-size: .85rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: capitalize;
+  box-shadow: 0 2px 6px rgba(0,0,0,.18);
+}
+#modalPokemonTypes span.grass   { background:#77c850; }
+#modalPokemonTypes span.fire    { background:#ee7f30; }
+#modalPokemonTypes span.water   { background:#678fee; }
+#modalPokemonTypes span.electric{ background:#f7cf2e; color:#000; }
+#modalPokemonTypes span.ice     { background:#98d5d7; color:#000; }
+#modalPokemonTypes span.ground  { background:#dfbf69; color:#000; }
+#modalPokemonTypes span.flying  { background:#a98ff0; }
+#modalPokemonTypes span.poison  { background:#aa72aa; }
+#modalPokemonTypes span.fighting{ background:#bf3029; }
+#modalPokemonTypes span.psychic { background:#f65687; }
+#modalPokemonTypes span.dark    { background:#725847; }
+#modalPokemonTypes span.rock    { background:#b8a137; }
+#modalPokemonTypes span.bug     { background:#a8b720; }
+#modalPokemonTypes span.ghost   { background:#6e5896; }
+#modalPokemonTypes span.steel   { background:#b9b7cf; color:#000; }
+#modalPokemonTypes span.dragon  { background:#6f38f6; }
+#modalPokemonTypes span.fairy   { background:#f9aec7; }
+
+/* Textos */
+.modal-content p { margin: 6px 0; font-size: .95rem; color:#333; }
+.modal-content strong { color:#111; }
+
+/* Botão Fechar */
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: 0;
+}
+.close:hover { color: #e63946; }
+
+@media (min-width: 992px) {
+  #modalPokemonImage { max-width: 220px; }
+}
