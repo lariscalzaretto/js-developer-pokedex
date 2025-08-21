@@ -8,7 +8,7 @@ const MAX_LOCAL_GIF = 650;
 // Decide qual imagem usar para cada Pokémon
 function getPokemonImageSrc(pokemon) {
   const id = pokemon.number;
-  const localGif = `./assets/css/pokemons/poke_${id}.gif`;
+  const localGif = `css/pokemons/poke_${id}.gif`;
   const pokePng = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
   const pokeArt = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 

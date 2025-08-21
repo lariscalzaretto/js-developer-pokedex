@@ -21,7 +21,7 @@
 
   const fill = p => {
     if (els.img) {
-      els.img.src = p.number <= 650 ? `./assets/css/pokemons/poke_${p.number}.gif` : (p.photo || '');
+      els.img.src = p.number <= 650 ? `css/pokemons/poke_${p.number}.gif` : (p.photo || '');
       els.img.alt = p.name || '';
     }
     if (els.name)   els.name.textContent   = p.name || '';
